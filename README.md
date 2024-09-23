@@ -1,1 +1,2 @@
-#alu
+#!/bin/bash
+su betty
