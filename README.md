@@ -1,1 +1,1 @@
-alu-shell readme
+Shell permissions
