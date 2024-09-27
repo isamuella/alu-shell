@@ -1,2 +1,2 @@
 #!/bin/bash
-shell redirections
+echo is used to print scripts
