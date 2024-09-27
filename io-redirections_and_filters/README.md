@@ -1,1 +1,2 @@
-i/o reidrections
+#!/bin/bash
+echo "Hello World"
