@@ -1,2 +1,2 @@
 #!/bin/bash
-echo (($WATER+$STIR))
+echo "$(( $(echo "$WATER" | tr 'a-z' '0-25') + $(echo "$STIR" | tr 'a-z' '0-25') ))" | tr '0-25' 'a-z'
