@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # writing  a script to dislay using for loop
-for i in {1..10}
+for _ in {1..10}
 do
 echo "Best School"
 done
