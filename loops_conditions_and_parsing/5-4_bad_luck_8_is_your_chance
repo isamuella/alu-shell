@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-
 #displaying script using while loop also using the if,elif and else statements
 count=1
 while [ $count -le 10 ];do
