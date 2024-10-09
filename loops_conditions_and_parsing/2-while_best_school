@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-#displaying a script using while loo
-while ((1..10))
+#displaying a script using while loop
+count=1
+while [ $count -le 10 ]
 do
 echo "Best School"
-1++
+count=$((count +1))
 done
