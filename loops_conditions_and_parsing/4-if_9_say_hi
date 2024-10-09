@@ -6,5 +6,5 @@ do
 echo "Best School"
 count=$((count + 1))
 done
-if [ $count-eq 9]
-	echo -e "Best School\nHi"
+if [ $count -eq 9 ];then
+	echo "Hi"
