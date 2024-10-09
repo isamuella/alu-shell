@@ -10,4 +10,3 @@ minute=$((minute + 1))
 done
 hour=$((hour + 1))
 done
-./7-clock | head -n 268
