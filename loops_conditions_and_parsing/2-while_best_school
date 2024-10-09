@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#displaying a script using while loo
+while ((1..10))
+do
+echo "Best School"
+1++
+done
