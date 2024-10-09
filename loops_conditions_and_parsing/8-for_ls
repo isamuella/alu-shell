@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#display with for loop
+for files in *; do
+	if [[ "$files" == *-* ]]; then
+		echo "${files#*-}"
+	else
+		echo "$files"
+	fi
+done
+
