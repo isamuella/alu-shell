@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+#display numbers
+
+for i in {1..100}
+do
+	case 0 in
+		$((i % 3)) )
+			case $((i % 5)) in
+				0) echo "Fizzbuzz";;
+				*) echo "Fizz";;
+			esac;;
+		$((i % 5)) )
+			echo "Buzz";;
+		*)
+			echo "$i";
+	esac
+done
+
