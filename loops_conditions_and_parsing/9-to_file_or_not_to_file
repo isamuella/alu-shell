@@ -10,7 +10,7 @@ if [ -f "school" ]; then
 # to check if the file is empty or not
 if [ -s "school" ]; then
 echo "school file is not empty"
-else
+elif [ ! -s "school" ]; then
 echo "school file is empty"
 fi
 
