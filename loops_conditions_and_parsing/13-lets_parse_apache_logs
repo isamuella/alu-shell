@@ -10,4 +10,4 @@ if [[ ! -f "$log_file" ]]; then
 fi
 
 # the IP address and HTTP status codes
-awk '{print $1, $9}' "$LOG_FILE" 
+awk '{print $1, $9}' "$log_file" 
