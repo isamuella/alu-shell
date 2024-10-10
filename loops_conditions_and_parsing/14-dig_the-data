@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#
+log_file="apache-access.log"
+
+awk '{count[$1, $9]++} END {for (ip_code in count) {print count[ip_code], ip_code}}' "$log_file" | sort -nr
