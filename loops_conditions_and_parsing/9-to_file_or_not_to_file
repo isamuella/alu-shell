@@ -15,8 +15,8 @@ echo "school file is empty"
 fi
 
 echo "school is a regular file"
-else
-	echo ""
+elif [ -d "school" ]; then
+	echo "school exists but it's a directory"
 fi
 
 echo "school file exists"
