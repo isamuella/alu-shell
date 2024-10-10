@@ -2,22 +2,29 @@
 # display files
 
 #to check if the file exists
-if [ -e "school" ];
-then
+if [ -e "school" ]; then
 	echo "school file exists"
 
 
 # to check if the file is empty or not
-if [ ! -s "school" ];
-then
+if [ -d "school" ]; then
+	cd "school"
+
+if [ ! -s "school" ]; then
 echo "school file is empty"
 else
 echo "school file is not empty"
 fi
+cd ..
+fi
 
 # to check if the file is a regular file
-if [ -f "school" ];
-then
+if [ -f "school" ]; then
+	if [ ! -s "school" ]; then
+	echo "school file is empty"
+else
+	echo "school file is not empty"
+fi
 	echo "school is a reular file"
 fi
 
