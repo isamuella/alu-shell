@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 #display /etc/passwd
-# Open the /etc/passwd file for reading
-while IFS=: read -r username password uid gid user_info home_directory shell; do
-    # Display the username, user ID, and home directory
-	echo "The user $username is part of the $gid gang, lives in $home_directory and rides $shell. $uid's place is protected by the passcode $password, more info about the user here: $user_info"
+
+while IFS=: read -r username gid home_directory shell uid password userid_info; do
+	echo "The user $username is part of the $gid gang, lives in $home_directory and rides $shell. $uid's place is protected by the passcode $password, more info about the user here: $userid_info"
 done < /etc/passwd
