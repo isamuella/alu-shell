@@ -5,17 +5,17 @@
 if [ -e "school" ]; then
 	echo "school file exists"
 
-#to ccheck if the fle is a regular file
-if [ -f "school" ]; then
-
-	echo "school file is a regular file"
-fi
 
 # to check if the file is empty or not
 if [ ! -s "school" ]; then
 echo "school file is empty"
 else
 echo "school file is not empty"
+fi
+
+# to check if the file is a regular file
+if [ -f "school" ]; then
+	echo "school is a reular file"
 fi
 
 else
