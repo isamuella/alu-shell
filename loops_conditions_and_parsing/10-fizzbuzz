@@ -3,16 +3,13 @@
 
 for i in {1..100}
 do
-	case 0 in
-		$((i % 3)) )
-			case $((i % 5)) in
-				0) echo "Fizzbuzz";;
-				*) echo "Fizz";;
-			esac;;
-		$((i % 5)) )
-			echo "Buzz";;
-		*)
-			echo "$i";
-	esac
+	if (( i % 3 == 0 && i % 5 == 0 )); then
+		echo "FizzBuzz"
+	elif (( i % 3 == 0 )); then
+		echo "Fizz"
+	elif (( i % 5 == 0 )); then
+		echo "Buzz"
+	else
+		echo "$i"
+	fi
 done
-
