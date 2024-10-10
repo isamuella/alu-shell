@@ -1,4 +1,14 @@
 #!/usr/bin/env bash
 # parse apache logs
 
-awk '{print $1,$9}' apache_access.log
+# Define the path to the Apache log file
+LOG_FILE="apache-access.log" # Make sure to have this file in the same directory
+
+# Check if the log file exists
+if [[ ! -f "$LOG_FILE" ]]; then
+  echo "Log file not found: $LOG_FILE"
+  exit 1
+fi
+
+# Use awk to extract IP addresses and HTTP status codes
+awk '{print $1, $9}' "$LOG_FILE" 
