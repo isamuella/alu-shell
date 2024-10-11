@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # list mmy processed
 
-ps -ef
+ps -auxf
 
