@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# list mmy processed
+
+ps -aux
+
