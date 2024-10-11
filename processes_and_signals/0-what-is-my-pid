@@ -1,5 +1,5 @@
-#!/usr/bin/env bahs
-# display own PID
+#!/usr/bin/env bash
+# my PID
 
 ps
 
