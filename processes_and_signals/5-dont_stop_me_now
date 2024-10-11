@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 # to stop an indefinite process
 
-killall 4-to_infinity_and_beyond
+pid=$(pgrep -f "4-to_infinity_and_beyond")
+
+if [ -n "$pid" ]; then
+	kill "$pid"
+else
+	echo "'4-to_infinity_and_beyond' process is not found"
+fi
 
