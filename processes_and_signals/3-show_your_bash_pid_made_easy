@@ -5,7 +5,7 @@ for PID in /proc/[0-9]*; do
 
 	PID=$(basename "$PID")
 
-	if grep -q "bash" "/proc/"$PID""comm" 2>/dev/null; then
+	if grep -q "bash" "/proc/""$PID""comm" 2>/dev/null; then
 		echo "$PID $(cat /proc/"$PID"/comm)"
 	fi
 done
