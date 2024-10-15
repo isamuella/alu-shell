@@ -3,8 +3,8 @@
 
 terminate (){
 echo"I am invincible!!!"
-
-trap "terminate"SIGTERM
+}
+trap "terminate" SIGTERM
 
 while true
 do
