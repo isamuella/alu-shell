@@ -1,12 +1,7 @@
 #!/usr/bin/env bash
 # Highlander
 
-terminate() {
-echo "I am invincible!!!"
-exit 0
-}
-
-trap "terminate" SIGTERM
+trap 'echo "I am invincible!!!"' SIGTERM
  
 while true; do
 echo "To infinity and beyond"
