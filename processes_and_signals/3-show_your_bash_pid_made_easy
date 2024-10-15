@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 # dislpay bash PID easily
 
-pgrep 
+for PID in /proc/[0-9]*; do
+
+	PID=$(basename $"PID")
+
+	if grep -q "bash" "/proc/"$PID""comm"
+		echo "$PID $(cat /proc/"$PID"/comm)"
+	fi
+done
 
