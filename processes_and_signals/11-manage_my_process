@@ -2,46 +2,27 @@
 # Manage the manage_my_process script
 
 PID_FILE="/var/run/my_process.pid"
-PROCESS_FILE="/tmp/my_process"
 
-start() {
-    if [ -f "$PID_FILE" ]; then
-        echo "manage_my_process already running"
-        exit 1
-    fi
+if [ "${1}" == "start" ]
+then
     ./manage_my_process &
-    echo $! > "$PID_FILE"
+    touch $PID_FILE
+    echo "$!" > $PID_FILE
     echo "manage_my_process started"
-}
-
-stop() {
-    if [ ! -f "$PID_FILE" ]; then
-        echo "manage_my_process not running"
-        exit 1
-    fi
-    kill "$(cat "$PID_FILE")"
-    rm -f "$PID_FILE"
+elif [ "${1}" == "stop" ]
+then
     echo "manage_my_process stopped"
-}
-
-restart() {
-    stop
-    start
+    kill "$(cat $PID_FILE)"
+    rm $PID_FILE
+elif [ "${1}" == "restart" ]
+then
+    kill "$(cat $PID_FILE)"
+    rm $PID_FILE
+    ./manage_my_process &
+    touch $PID_FILE
+    echo "$!" > $PID_FILE
     echo "manage_my_process restarted"
-}
-
-case "$1" in
-    start)
-        start
-        ;;
-    stop)
-        stop
-        ;;
-    restart)
-        restart
-        ;;
-    *)
-        echo "Usage: $0 {start|stop|restart}"
-        ;;
-esac
+else
+    echo "Usage: manage_my_process {start|stop|restart}"
+fi
 
