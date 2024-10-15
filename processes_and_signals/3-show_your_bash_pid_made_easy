@@ -3,7 +3,7 @@
 
 for PID in /proc/[0-9]*; do
 
-	PID=$(basename $"PID")
+	PID=$(basename "$PID")
 
 	if grep -q "bash" "/proc/"$PID""comm"
 		echo "$PID $(cat /proc/"$PID"/comm)"
