@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 # display  to infinity and beyond
 
-terminate (){
-echo"I am invincible!!!"
-}
-trap "terminate" SIGTERM
+rap 'echo"I am invincible!!!"' SIGTERM
 
 while true
 do
